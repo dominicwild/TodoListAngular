@@ -3,18 +3,27 @@
 
   <form [formGroup]="todoItemsControls">
 
-    <div class="todo-input">
-      <label>
-        Item: <input type="text" [formControl]="todoItemsControls.controls.addItem"
-                     (keydown)="addItemOnEnter($event)" />
-      </label>
-      <button (click)="addItem()">+</button>
+    <div class="todo-input group" tuiGroup>
+      <tui-input class="text-input" [formControl]="todoItemsControls.controls.addItem">
+        Add Item:
+        <input tuiTextfield
+               placeholder="Task Name"
+               (keydown)="addItemOnEnter($event)"
+        />
+      </tui-input>
+      <button
+        tuiButton
+        type="button"
+        (click)="addItem()"
+      >
+        +
+      </button>
     </div>
 
     <div class="todo-list">
       <div class="tui-form__row" *ngFor="let item of todos.controls">
         <tui-checkbox-block
-          contentAlign="right"
+          contentAlign="left"
           size="l"
           [formControl]="item.controls.completed"
         >

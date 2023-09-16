@@ -23,8 +23,6 @@ interface TodoForm {
 })
 export class TodoAppComponent {
 
-  addItemValue = ""
-
   todoItemsControls: FormGroup<TodoForm>
 
   constructor(private fb: FormBuilder) {

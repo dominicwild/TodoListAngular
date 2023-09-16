@@ -1,13 +1,36 @@
-.todo-list {
+.todo-app form {
   display: flex;
   flex-direction: column;
-  margin: 2rem .5rem .5rem;
+  align-items: center;
+
+  width: 50%;
+  margin: auto;
+
+  > * {
+    width: 100%;
+  }
 }
 
 .todo-input {
+  display: flex;
+  align-items: center;
+
   margin: .5rem;
 
   button {
-    margin-left: .5rem
+    margin-left: .5rem;
+    font-size: 4rem;
   }
+
+  .text-input {
+    flex-grow: 3;
+  }
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin: 2rem .5rem .5rem;
 }
