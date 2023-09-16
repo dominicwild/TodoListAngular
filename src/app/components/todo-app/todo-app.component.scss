@@ -31,6 +31,17 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-items: center;
 
   margin: 2rem .5rem .5rem;
+
+  button {
+    font-size: 1.5rem;
+    margin-left: .5rem;
+  }
+
+  .tui-form__row {
+    display: flex;
+    align-items: center;
+  }
 }

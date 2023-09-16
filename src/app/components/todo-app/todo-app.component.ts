@@ -66,4 +66,8 @@ export class TodoAppComponent {
       this.addItem();
     }
   }
+
+  removeItem(index: number) {
+    this.todos.removeAt(index)
+  }
 }

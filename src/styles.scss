@@ -1,3 +1,26 @@
+@import '@taiga-ui/core/styles/taiga-ui-local.scss';
+
 body {
   padding: 1rem 2rem;
+}
+
+
+[tuiWrapper][data-appearance='red'] {
+  $mainColor: #fa5353;
+  background: $mainColor;
+  color: #fff;
+
+
+  &:hover {
+    background: darken($mainColor, 20%);
+  }
+
+  &:active {
+    background: #d17575;
+  }
+
+  &:disabled {
+    background: #fac0c0;
+  }
+
 }

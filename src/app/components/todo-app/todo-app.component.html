@@ -21,7 +21,7 @@
     </div>
 
     <div class="todo-list">
-      <div class="tui-form__row" *ngFor="let item of todos.controls">
+      <div class="tui-form__row" *ngFor="let item of todos.controls; let index = index">
         <tui-checkbox-block
           contentAlign="left"
           size="l"
@@ -29,8 +29,16 @@
         >
           {{item.controls.name.value}}
         </tui-checkbox-block>
+        <button
+          tuiButton
+          appearance="red"
+          type="button"
+          size="s"
+          (click)="removeItem(index)"
+        >
+          -
+        </button>
       </div>
     </div>
   </form>
 </div>
-
