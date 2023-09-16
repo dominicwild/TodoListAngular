@@ -1,0 +1,27 @@
+<div class="todo-app">
+  <h1>To Do App</h1>
+
+  <form [formGroup]="todoItemsControls">
+
+    <div class="todo-input">
+      <label>
+        Item: <input type="text" [formControl]="todoItemsControls.controls.addItem"
+                     (keydown)="addItemOnEnter($event)" />
+      </label>
+      <button (click)="addItem()">+</button>
+    </div>
+
+    <div class="todo-list">
+      <div class="tui-form__row" *ngFor="let item of todos.controls">
+        <tui-checkbox-block
+          contentAlign="right"
+          size="l"
+          [formControl]="item.controls.completed"
+        >
+          {{item.controls.name.value}}
+        </tui-checkbox-block>
+      </div>
+    </div>
+  </form>
+</div>
+
